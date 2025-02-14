@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* slider 2 */
+.payment_wrapper_sujit .payment_logos {
+    overflow: hidden;
+    background: black;
+    padding: 16px 0;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+}
+.payment_wrapper_sujit .payment_logos:before,
+.payment_wrapper_sujit .payment_logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.payment_wrapper_sujit .payment_logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+}
+.payment_wrapper_sujit .payment_logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+.payment_wrapper_sujit .payment_logos:hover .payment_logos-slide {
+    animation-play-state: paused;
+}
+.payment_wrapper_sujit .payment_logos-slide {
+    display: flex;
+    animation: sujit_slide 50s linear infinite;
+    width: auto;
+}
+.payment_wrapper_sujit .payment_logos-slide img {
+    height: 50px;
+    margin: 0 30px;
+    width: 110px;
+}
+@keyframes sujit_slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* 0 -100 */
+.payment_wrapper_sujit .payment_logos_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+@media only screen and (max-width: 600px) {
+    .payment_wrapper_sujit .payment_logos-slide img {
+        height: 35px;
+        margin: 0 10px;
+        width: 75px;
+    }
+    .payment_wrapper_sujit .payment_logos:before,
+    .payment_wrapper_sujit .payment_logos:after {
+        width: 100px;
+    }
+    .g_paddings{
+        padding: 0;
+    }
+}
+
+/* slider 1 */
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gp_logos {
+    overflow: hidden;
+    background: #0a0a0a;
+    padding: 0 0;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+}
+.gp_logos:before,
+.gp_logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.gp_logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #0a0a0a);
+}
+.gp_logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #0a0a0a);
+}
+.game-providers .gp_logos:hover .gp_logos-slide {
+    animation-play-state: paused;
+}
+.gp_logos-slide {
+    display: inline-block;
+    animation: 40s slide infinite linear;
+    width: auto;
+}
+.gp_logos-slide img {
+    height: 75px;
+    width: 170px;
+    margin: 0 20px;
+}
+@keyframes slide {
+    from {
+        transform: translateX(0); 
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .gp_logos-slide img {
+        height: 55px;
+        margin: 0 10px;
+        width: 100px;
+    }
+    .gp_logos:before,
+    .gp_logos:after {
+        width: 100px;
+        /* display: none; */
+    }
+    .g_paddings{
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .container.g_paddings{
+        padding: 0;
+    }
+}
